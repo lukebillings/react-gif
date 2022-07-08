@@ -6,7 +6,7 @@ import '../assets/stylesheets/application.scss';
 const Hello = ({ name }) => {
   return (
     <div>
-      Hello,
+      <h1>hello</h1>  Hello,
       {name}
     </div>
   );
@@ -14,5 +14,5 @@ const Hello = ({ name }) => {
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(<Hello name="people" />, root);
 }
