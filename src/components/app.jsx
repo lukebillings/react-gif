@@ -15,23 +15,25 @@ class App extends Component {
       selectedGifId: "DFexVkRG7gX9oCy68r"
     }
 
-    this.search("homer thinking");
+    this.search = this.search.bind(this);
+    this.selectGif = this.selectGif.bind(this);
   }
 
-  search = (query) => {
-    giphy('hAdPLvZK55nDjzGFQM4GiH0OMC5PTczQ').search({
-      q: query,
-      rating: 'g',
-      limit: 10
-  }, (err, res) => {
-      // Res contains gif data!
-      console.log(res);
+  search(query) {
+    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=hAdPLvZK55nDjzGFQM4GiH0OMC5PTczQ&q=${query}&limit=10`
+    fetch(giphEndpoint).then(response => response.json()).then((data) => {
+      const gifs = data.data.map(giph => giph.id)
       this.setState({
-        gifs: res.data
-      });
-  });
- }
+        gifs: gifs
+      })
+    })
+  }
 
+ selectGif(id) {
+   this.setState({
+     selectedGifId: id
+   });
+ }
 
   render() {
     const gifs = [{ id: "DFexVkRG7gX9oCy68r" }, { id: "DFexVkRG7gX9oCy68q"}]
@@ -44,7 +46,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs} />
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
       );
@@ -52,3 +54,4 @@ class App extends Component {
 }
 
 export default App;
+
