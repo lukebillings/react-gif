@@ -1,30 +1,15 @@
-# react-boilerplate
+# Gif Search engine
 
 Simple react starter with the following config:
 
-- React, ReactDOM
-- Webpack 4
-- Babel with es2015 and react presets
-- Bootstrap (css only, loaded from a cdn in `index.html`)
-- work with `.js` or `.jsx` files
-- main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+- Type in the search bar a word
+- View a selection of Gifs in the right sidedbar
+- Click on the one you want to focus on
+- See your chosen gif in all it's glory in the centre!
 
-## Scripts
-
-To start the local Webpack Dev Server (usually on port `8080`):
+## Lookking to run the repo locally?
 
 ```bash
+yarn install
 yarn start
-```
-
-To lint all JavaScript files in the `src` folder:
-
-```bash
-yarn lint
-```
-
-To build and deploy your app to `gh-pages` branch on the GitHub repo:
-
-```bash
-yarn deploy
 ```
