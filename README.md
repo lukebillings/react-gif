@@ -1,4 +1,4 @@
-# Gif Search engine
+# Gif Search
 
 How it works:
 
