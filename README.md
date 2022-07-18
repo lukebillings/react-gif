@@ -1,6 +1,6 @@
 # Gif Search engine
 
-Simple react starter with the following config:
+How it works:
 
 - Type in the search bar a word
 - View a selection of Gifs in the right sidedbar
