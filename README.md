@@ -7,7 +7,7 @@ How it works:
 - Click on the one you want to focus on
 - See your chosen Gif magically appear in the centre of your screen!
 
-## Lookking to run the repo locally?
+## Looking to run the repo locally?
 
 ```bash
 yarn install
